@@ -4,13 +4,13 @@
 <h1>Home</h1>
 <p>
   <%= content %>
-  <% for(let i=0;i<newPosts.length;i++){ %>
+  <% for(let i=0;i<posts.length;i++){ %>
     <div class="item heading">
-      <h1><%= newPosts[i].title %></h1>
-      <p><%= newPosts[i].body.substring(0,100) +" ..." %>
-      <a href="/posts/<%=newPosts[i].title %>">Read more</a>
+      <h1><%= posts[i].title %></h1>
+      <p><%= posts[i].content.substring(0,100) +" ..." %>
+      <a href="/posts/<%=posts[i]._id %>">Read more</a>
       </p>
-      <%=console.log(newPosts[i].title);%>
+      <%=console.log(posts[i].title);%>
       </div>
 
       <% } %>
